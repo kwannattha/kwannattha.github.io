@@ -1,84 +1,82 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <!--add bootstrap from CDN-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO application on JS with DOM</title>
+
+    <!-- Add Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,700;1,300;1,400&display=swap"
+        rel="stylesheet" />
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+        integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./style.css" />
+
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm text-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-    </nav>
+    <!-- Start Content -->
     <div class="container">
-        <h1 class="py-4">
-            <center>935 304 Web Application</center>
-        </h1>
-        <p>
-            <center>this is Web Application course</center>
-        </p>
 
-        <div class="row">
-            <div class="col-sm-12 col-md-6 col-lg-3">
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <center>
-                            <h5 class="nam-link" href="aboutme.html">About Me Page</h5>
-                            <p class="card-text"></p>
-                            <a href="aboutme.html" class="btn btn-primary">CLICK</a>
-                        </center>
-                    </div>
-                </div>
+        <!-- Start Todo Header -->
+        <div id="header-container">
+
+            <!-- Start Text Header -->
+            <div class="text-center pt-5 pb-4">
+                <h1>TODO.JS<br>Application</h1>
             </div>
-            <div class="col-sm-12 col-md-6 col-lg-3">
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <center>
-                            <h5 class="card-title-">TODO application on JS with DOM</h5>
-                            <p class="card-text">
-                                <a href="/Todojs/index.html" class="btn btn-primary">CLICK</a>
-                        </center>
-                        </p>
+            <!-- End Text Header -->
+
+            <!-- Start Todo Add Item Section -->
+            <div id="todo-input-container" class="pb-5">
+                <form>
+                    <div class="input-group input-group-lg">
+                        <input id="todo-input" type="text" class="form-control form-control-lg"
+                            placeholder="Add New Task ...">
+                        <span class="input-group-append">
+                            <button id="todo-button" type="submit" class="btn btn-primary">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </span>
                     </div>
-                </div>
+                </form>
             </div>
-            <div class="col-sm-12 col-md-6 col-lg-3">
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <center>
-                            <h5 class="card-title">JavaScript</h5>
-                            <p class="card-text"></p>
-                            <a href="#" class="btn btn-primary">CLICK</a>
-                        </center>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-3">
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <center>
-                            <h5 class="card-title">Final Project</h5>
-                            <p class="card-text"></p>
-                            <a href="#" class="btn btn-primary">CLICK</a>
-                        </center>
-                    </div>
-                </div>
-            </div>
+            <!-- End Todo Add Item Section -->
+
         </div>
+        <!-- End Todo Header -->
 
-        <!--end of row-->
+        <!-- Start Todo List Section -->
+        <div id="todo-lists-container" class="mb-4">
+            <ul id="todo-lists" class="list-group list-group-flush">
+                <!-- Add Todo List By app.js -->
+            </ul>
+        </div>
+        <!-- End Todo List Section -->
+
     </div>
-    <!-- js from bootstrap-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+    <!-- End Content -->
+
+    <!-- Javascript -->
+    <script src="./app.js"></script>
 </body>
 
 </html>
